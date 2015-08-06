@@ -107,7 +107,7 @@ body {
   background: white; }
   .bubble span {
     color: #20b79d;
-    font-size: 140px; }
+    font-size: 40px; }
   .bubble.bubble--selected {
     z-index: 10;
     animation-duration: 1.5s;
