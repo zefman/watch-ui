@@ -1,0 +1,19 @@
+{
+  "name": "watch-ui",
+  "version": "1.0.0",
+  "description": "An Apple Watch Interface built with HTML, CSS & JS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zefman/watch-ui.git"
+  },
+  "author": "Jozef Maxted",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zefman/watch-ui/issues"
+  },
+  "homepage": "https://github.com/zefman/watch-ui"
+}

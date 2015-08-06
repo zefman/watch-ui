@@ -1,0 +1,20 @@
+{
+  "name": "watch-ui",
+  "version": "0.0.1",
+  "authors": [
+    "Jozef Maxted <jozef.maxted@theunit.co.uk>"
+  ],
+  "description": "An Apple Watch Interface built with HTML, CSS & JS",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
