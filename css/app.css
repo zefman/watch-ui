@@ -1,0 +1,327 @@
+/*------------------------------------*    #RESETS
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  outline: none;
+  /* Removes grey outline when tapping things */
+  -webkit-tap-highlight-color: transparent; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  height: 100%;
+  width: 100%; }
+
+body {
+  background: linear-gradient(to bottom, #2ddce1 0%, #20b79d 100%);
+  height: 100%;
+  width: 100%; }
+
+/*------------------------------------*    #MENU
+\*------------------------------------*/
+.viewport {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.container {
+  width: 200%;
+  height: 200%;
+  margin: -50%; }
+
+.bubble-container {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 45px; }
+  .bubble-container.shadow {
+    z-index: 10; }
+    .bubble-container.shadow .bubble {
+      z-index: 10; }
+    .bubble-container.shadow:after {
+      content: '';
+      display: block;
+      position: fixed;
+      top: -200%;
+      left: -200%;
+      width: 500%;
+      height: 500%;
+      background: rgba(0, 0, 0, 0.6);
+      animation-name: fadeIn;
+      animation-duration: 1s; }
+
+.bubble {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white; }
+  .bubble span {
+    color: #20b79d;
+    font-size: 140px; }
+  .bubble.bubble--selected {
+    z-index: 10;
+    animation-duration: 1.5s;
+    animation-name: scaleUp; }
+  .bubble.notification:after {
+    content: '!';
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    font-family: 'fat_frank_heavy';
+    font-size: 25px;
+    line-height: 35px;
+    animation-name: bounceIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-delay: 1.5s; }
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both; }
+
+.animate-delay-1 {
+  animation-delay: 100ms; }
+
+.animate-delay:nth-of-type(1) {
+  animation-delay: 200ms; }
+
+.animate-delay-2 {
+  animation-delay: 200ms; }
+
+.animate-delay:nth-of-type(2) {
+  animation-delay: 400ms; }
+
+.animate-delay-3 {
+  animation-delay: 300ms; }
+
+.animate-delay:nth-of-type(3) {
+  animation-delay: 600ms; }
+
+.animate-delay-4 {
+  animation-delay: 400ms; }
+
+.animate-delay:nth-of-type(4) {
+  animation-delay: 800ms; }
+
+.animate-delay-5 {
+  animation-delay: 500ms; }
+
+.animate-delay:nth-of-type(5) {
+  animation-delay: 1000ms; }
+
+.animate-delay-6 {
+  animation-delay: 600ms; }
+
+.animate-delay:nth-of-type(6) {
+  animation-delay: 1200ms; }
+
+.animate-delay-7 {
+  animation-delay: 700ms; }
+
+.animate-delay:nth-of-type(7) {
+  animation-delay: 1400ms; }
+
+.animate-delay-8 {
+  animation-delay: 800ms; }
+
+.animate-delay:nth-of-type(8) {
+  animation-delay: 1600ms; }
+
+.animate-delay-9 {
+  animation-delay: 900ms; }
+
+.animate-delay:nth-of-type(9) {
+  animation-delay: 1800ms; }
+
+.animate-delay-10 {
+  animation-delay: 1000ms; }
+
+.animate-delay:nth-of-type(10) {
+  animation-delay: 2000ms; }
+
+.animate-delay-11 {
+  animation-delay: 1100ms; }
+
+.animate-delay:nth-of-type(11) {
+  animation-delay: 2200ms; }
+
+.animate-delay-12 {
+  animation-delay: 1200ms; }
+
+.animate-delay:nth-of-type(12) {
+  animation-delay: 2400ms; }
+
+.animate-delay-13 {
+  animation-delay: 1300ms; }
+
+.animate-delay:nth-of-type(13) {
+  animation-delay: 2600ms; }
+
+.animate-delay-14 {
+  animation-delay: 1400ms; }
+
+.animate-delay:nth-of-type(14) {
+  animation-delay: 2800ms; }
+
+.animate-delay-15 {
+  animation-delay: 1500ms; }
+
+.animate-delay:nth-of-type(15) {
+  animation-delay: 3000ms; }
+
+.animate-delay-16 {
+  animation-delay: 1600ms; }
+
+.animate-delay:nth-of-type(16) {
+  animation-delay: 3200ms; }
+
+.animate-delay-17 {
+  animation-delay: 1700ms; }
+
+.animate-delay:nth-of-type(17) {
+  animation-delay: 3400ms; }
+
+.animate-delay-18 {
+  animation-delay: 1800ms; }
+
+.animate-delay:nth-of-type(18) {
+  animation-delay: 3600ms; }
+
+.animate-delay-19 {
+  animation-delay: 1900ms; }
+
+.animate-delay:nth-of-type(19) {
+  animation-delay: 3800ms; }
+
+.animate-delay-20 {
+  animation-delay: 2000ms; }
+
+.animate-delay:nth-of-type(20) {
+  animation-delay: 4000ms; }
+
+.animate-delay-21 {
+  animation-delay: 2100ms; }
+
+.animate-delay:nth-of-type(21) {
+  animation-delay: 4200ms; }
+
+.animate-delay-22 {
+  animation-delay: 2200ms; }
+
+.animate-delay:nth-of-type(22) {
+  animation-delay: 4400ms; }
+
+.animate-delay-23 {
+  animation-delay: 2300ms; }
+
+.animate-delay:nth-of-type(23) {
+  animation-delay: 4600ms; }
+
+.animate-delay-24 {
+  animation-delay: 2400ms; }
+
+.animate-delay:nth-of-type(24) {
+  animation-delay: 4800ms; }
+
+.animate-delay-25 {
+  animation-delay: 2500ms; }
+
+.animate-delay:nth-of-type(25) {
+  animation-delay: 5000ms; }
+
+.animate-delay-26 {
+  animation-delay: 2600ms; }
+
+.animate-delay:nth-of-type(26) {
+  animation-delay: 5200ms; }
+
+.animate-delay-27 {
+  animation-delay: 2700ms; }
+
+.animate-delay:nth-of-type(27) {
+  animation-delay: 5400ms; }
+
+.animate-delay-28 {
+  animation-delay: 2800ms; }
+
+.animate-delay:nth-of-type(28) {
+  animation-delay: 5600ms; }
+
+.animate-delay-29 {
+  animation-delay: 2900ms; }
+
+.animate-delay:nth-of-type(29) {
+  animation-delay: 5800ms; }
+
+.animate-delay-30 {
+  animation-delay: 3000ms; }
+
+.animate-delay:nth-of-type(30) {
+  animation-delay: 6000ms; }
+
+.animate--fadeInScale {
+  animation-name: fadeInScale; }
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }

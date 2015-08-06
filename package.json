@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/zefman/watch-ui/issues"
   },
-  "homepage": "https://github.com/zefman/watch-ui"
+  "homepage": "https://github.com/zefman/watch-ui",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  }
 }
