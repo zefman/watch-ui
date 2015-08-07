@@ -80,37 +80,6 @@
             } );
         }
 
-        // If an icon was selected position it in the center
-        // by translating the container with its offset to its center
-        if ( selected && allowUpdate ) {
-
-            var rect = selectedIcon.getBoundingClientRect();
-            var iconCenterAdjust = rect.width / 2;
-            var offsetX = viewPortCenterX - ( rect.left + iconCenterAdjust );
-            var offsetY = viewPortCenterY - ( rect.top + iconCenterAdjust );
-
-            // Position the container
-            container.css( {
-                transition: 'all 1s ease',
-                transform: 'translate3d( ' + ( containerX + offsetX ) + 'px, ' + ( containerY + offsetY ) + 'px, 0 )'
-            } );
-
-            allowUpdate = false;
-
-            $( container ).one( 'transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
-                // hide the scaled h1
-                selectedH1.style.display = 'block';
-                // show the unsclaed h1
-                selectedIcon.firstChild.style.visibility = 'hidden';
-                // add the class in order to grow
-                $( selectedIcon ).addClass( 'animate bubble--selected' );
-
-                $rootScope.animationClass = "transition-view";
-
-                return;
-            } );
-        }
-
         // Add drag so the movement slows down
         moveX *= 0.95;
         moveY *= 0.95;
@@ -135,7 +104,7 @@
             }
         }
 
-        // Adjust the scale of the dots
+        // Adjust the scale of the bubbles
         setScale();
 
         window.requestAnimationFrame( update );
@@ -190,7 +159,6 @@
      * of the screen they are
      */
     function setScale() {
-        var icon;
         var iconCenterAdjust = iconWidth / 2;
         for ( var i = 0; i < totalIcons; i++ ) {
             var rect = iconContainers[ i ].getBoundingClientRect();
@@ -198,7 +166,7 @@
             var xDiff = Math.abs( viewPortCenterX - ( rect.left + iconCenterAdjust ) ) / viewportWidth;
             var yDiff = Math.abs( viewPortCenterY - ( rect.top + iconCenterAdjust ) ) / viewportHeight;
 
-            var scale = Math.max( 1.1 - ( ( xDiff + yDiff ) ), 0.1 );
+            var scale = Math.max( 1 - ( ( xDiff + yDiff ) ), 0.1 );
 
             $( icons[ i ] ).css( {
                 transform: 'scale( ' + scale + ' ) translate3d( 0, 0, 0 )'
